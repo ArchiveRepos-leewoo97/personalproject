@@ -2,9 +2,11 @@ package com.dldnwls.personalproject.backend.domain.member.entity;
 
 import com.dldnwls.personalproject.backend.domain.channel.entity.Channel;
 import com.dldnwls.personalproject.backend.domain.communitypost.entity.CommunityPost;
+import com.dldnwls.personalproject.backend.domain.member.dto.request.SignUpReqDto;
 import com.dldnwls.personalproject.backend.domain.point.entity.Point;
 import com.dldnwls.personalproject.backend.domain.subscribechannel.entity.SubscribeChannel;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
@@ -46,4 +48,15 @@ public class Member {
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<SubscribeChannel> subscribeChannels;
+
+    @Builder
+    public Member(String email, String password, String name, String nickName, int age, int sex) {
+        this.email = email;
+        this.password = password;
+        this.name = name;
+        this.nickName = nickName;
+        this.age = age;
+        this.sex = sex;
+    }
+
 }

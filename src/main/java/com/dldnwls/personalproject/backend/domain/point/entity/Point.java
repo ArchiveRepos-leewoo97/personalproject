@@ -2,6 +2,7 @@ package com.dldnwls.personalproject.backend.domain.point.entity;
 
 import com.dldnwls.personalproject.backend.domain.member.entity.Member;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
@@ -23,4 +24,10 @@ public class Point {
     @ManyToOne(fetch = FetchType.LAZY)
     private Member member;
 
+    @Builder
+    public Point(Date purchaseDate, int purchasePoint, boolean useType) {
+        this.purchaseDate = purchaseDate;
+        this.purchasePoint = purchasePoint;
+        this.useType = useType;
+    }
 }

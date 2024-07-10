@@ -24,7 +24,6 @@ public class MemberServiceImpl implements MemberService { //회원 서비스 구
                 .age(signUpReqDto.getAge())
                 .sex(signUpReqDto.getSex())
                 .build();
-//      memberRepository.save
     }
 
 }

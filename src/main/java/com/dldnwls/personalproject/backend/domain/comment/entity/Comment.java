@@ -3,6 +3,7 @@ package com.dldnwls.personalproject.backend.domain.comment.entity;
 import com.dldnwls.personalproject.backend.domain.communitypost.entity.CommunityPost;
 import com.dldnwls.personalproject.backend.domain.member.entity.Member;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
@@ -24,4 +25,10 @@ public class Comment {
 
     @ManyToOne(fetch = FetchType.LAZY)
     Member member;
+
+    @Builder
+    public Comment(String content, Date registTime) {
+        this.content = content;
+        this.registTime = registTime;
+    }
 }

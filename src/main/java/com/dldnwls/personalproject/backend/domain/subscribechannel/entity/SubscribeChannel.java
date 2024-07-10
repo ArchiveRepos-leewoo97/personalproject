@@ -3,6 +3,7 @@ package com.dldnwls.personalproject.backend.domain.subscribechannel.entity;
 import com.dldnwls.personalproject.backend.domain.channel.entity.Channel;
 import com.dldnwls.personalproject.backend.domain.member.entity.Member;
 import jakarta.persistence.*;
+import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
@@ -26,4 +27,11 @@ public class SubscribeChannel {
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Channel channel;
+
+    @Builder
+    public SubscribeChannel(Date startDate, Date endDate, int tier) {
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.tier = tier;
+    }
 }

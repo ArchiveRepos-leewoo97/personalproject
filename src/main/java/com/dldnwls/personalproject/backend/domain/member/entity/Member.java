@@ -5,6 +5,7 @@ import com.dldnwls.personalproject.backend.domain.channel.entity.Channel;
 import com.dldnwls.personalproject.backend.domain.communitypost.entity.CommunityPost;
 import com.dldnwls.personalproject.backend.domain.point.entity.Point;
 import com.dldnwls.personalproject.backend.domain.subscribechannel.entity.SubscribeChannel;
+import com.dldnwls.personalproject.backend.global.basetimeentity.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import java.util.List;
 
 @NoArgsConstructor
 @Entity
-public class Member {
+public class Member extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -7,8 +7,8 @@ import com.dldnwls.personalproject.backend.domain.member.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-@Service
 @RequiredArgsConstructor
+@Service
 public class MemberServiceImpl implements MemberService { //회원 서비스 구현
 
     private final MemberRepository memberRepository;
@@ -24,6 +24,8 @@ public class MemberServiceImpl implements MemberService { //회원 서비스 구
                 .age(signUpReqDto.getAge())
                 .sex(signUpReqDto.getSex())
                 .build();
+
+        memberRepository.save(member);
     }
 
 }

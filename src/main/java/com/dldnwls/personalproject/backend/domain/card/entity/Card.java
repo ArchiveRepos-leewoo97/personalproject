@@ -1,6 +1,7 @@
 package com.dldnwls.personalproject.backend.domain.card.entity;
 
 import com.dldnwls.personalproject.backend.domain.member.entity.Member;
+import com.dldnwls.personalproject.backend.global.basetimeentity.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -9,7 +10,7 @@ import java.util.Random;
 
 @NoArgsConstructor
 @Entity
-public class Card {
+public class Card extends BaseTimeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,10 +1,10 @@
 package com.dldnwls.personalproject.backend.domain.member.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
 @RequiredArgsConstructor
+@RestController
 public class MemberController {
 
 }

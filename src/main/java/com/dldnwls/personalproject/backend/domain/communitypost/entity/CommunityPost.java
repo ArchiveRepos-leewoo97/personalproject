@@ -27,7 +27,7 @@ public class CommunityPost {
 
     private Date registTime; //게시글 등록시간
 
-    @OneToMany(mappedBy = "CommunityPost", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "communityPost", cascade = CascadeType.ALL)
     private List<Comment> comments;
 
     @ManyToOne(fetch = FetchType.LAZY)

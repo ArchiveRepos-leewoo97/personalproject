@@ -1,4 +1,4 @@
-package com.dldnwls.personalproject.backend.domain.member.service.Impl;
+package com.dldnwls.personalproject.backend.domain.member.service.impl;
 
 import com.dldnwls.personalproject.backend.domain.member.dto.request.SignUpReqDto;
 import com.dldnwls.personalproject.backend.domain.member.entity.Member;

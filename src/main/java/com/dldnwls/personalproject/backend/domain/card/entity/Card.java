@@ -5,10 +5,11 @@ import com.dldnwls.personalproject.backend.global.basetimeentity.BaseTimeEntity;
 import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Random;
 
-@NoArgsConstructor
+@RequiredArgsConstructor
 @Entity
 public class Card extends BaseTimeEntity {
 

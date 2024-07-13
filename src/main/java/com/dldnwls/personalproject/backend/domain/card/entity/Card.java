@@ -25,9 +25,10 @@ public class Card extends BaseTimeEntity {
     private Member member;
 
     @Builder
-    public Card(String cardNumber, int cardBalance) {
+    public Card(String cardNumber, int cardBalance, Member member) {
         this.cardNumber = cardNumber;
         this.cardBalance = cardBalance;
+        this.member = member;
     }
 
     //카드 발급(카드를 발급받을때, 자동으로 카드 번호를 생성해주고, 100만원 이하의 랜덤한 금액을 카드 잔액에 충전해준다.)
